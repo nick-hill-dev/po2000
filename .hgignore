@@ -3,3 +3,7 @@ S-Push.bat
 S-Commit.bat
 S-Update.bat
 S-Generate.bat
+POENGINE.TPU
+*.$$$
+stderr.txt
+stdout.txt
