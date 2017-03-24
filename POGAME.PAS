@@ -172,7 +172,7 @@ begin
   SetColor(4); Rectangle(65,WorstPlayer*12+21,350,WorstPlayer*12+31);
   SetColor(2); SetFillStyle(1,2); Bar(355,Winner*12+21,375,Winner*12+31);
   SetColor(15); OutTextXY(1,460,'Level over - Press ''C'' to continue...');
-  REPEAT UNTIL UpCase(readkey)='C';
+  REPEAT UNTIL UpCase(ReadKey)='C';
   SetColor(0); SetFillStyle(1,0); Bar(1,460,640,480);
 end;
 
@@ -209,15 +209,15 @@ begin
       ShowWindow(290,65+(PLN*9),310,88,'Define keys for player '+S1,TRUE);
       SetColor(0); Str(PLN,S1);
       OutTextXY(300,85+(PLN*9),'Player '+S1+' - Press key for UP:');
-      KUp[PLN]:=ReadKey;
+      KUp[PLN]:=UpCase(ReadKey);
       OutTextXY(300,97+(PLN*9),'Player '+S1+' - Press key for DOWN:');
-      KDown[PLN]:=ReadKey;
+      KDown[PLN]:=UpCase(ReadKey);
       OutTextXY(300,109+(PLN*9),'Player '+S1+' - Press key for LEFT:');
-      KLeft[PLN]:=ReadKey;
+      KLeft[PLN]:=UpCase(ReadKey);
       OutTextXY(300,121+(PLN*9),'Player '+S1+' - Press key for RIGHT:');
-      KRight[PLN]:=ReadKey;
+      KRight[PLN]:=UpCase(ReadKey);
       OutTextXY(300,133+(PLN*9),'Player '+S1+' - Press key for FIRE:');
-      KFire[PLN]:=ReadKey;
+      KFire[PLN]:=UpCase(ReadKey);
       KeysSetup[PLN]:=true;
     end;
     {* Set initial AI victims :}
@@ -442,7 +442,7 @@ begin
   ShowWindow(130,100,380,50,'Message',DECOL);
   SetColor(0); OutTextXY(140,120,Msg);
   OutTextXY(140,132,'Press the ''C'' key to continue...');
-  REPEAT UNTIL Readkey='C';
+  REPEAT UNTIL UpCase(ReadKey)='C';
 end;
 
 

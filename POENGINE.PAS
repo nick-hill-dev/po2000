@@ -464,7 +464,7 @@ end;
 procedure PlayLevel;
 begin
   repeat
-    C:='^'; if Keypressed=true then C:=ReadKey;
+    C:='^'; if Keypressed=true then C:=UpCase(ReadKey);
     for G:=1 to NumHumanPlayers do begin                {* Process humans}
       if Alive[G]=true then begin
         if C=KUp[G] then DIR[G]:=1;
